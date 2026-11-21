@@ -29,3 +29,7 @@ GitHub Pages began serving the project from the gh-pages branch. Playwright exer
 The shell could not open a loopback listener. Its local WebKit and Firefox launches aborted before rendering a page, and the local Chromium launcher was denied a macOS process registration. The connected Playwright Chrome instance provided the real-browser test. Release Safari, release Firefox, physical loudspeaker output, hardware interoperability and comprehensive accessibility auditing remain unverified. An escalated shell request to check Pages settings was unavailable under this session's approval policy. The GitHub connector published the branches and the public URL returned HTTP 200.
 
 Cover illustration generated with the built-in image tool and saved as assets/coupler.webp. The brief requested a landscape engraving of a black telephone handset seated in twin rubber acoustic cups on a sloped metal enclosure, with coiled cord, dense mid-century engineering-manual hatching and an ivory background. Its historical counterpart in the origin story is G. Edward Johnson's photograph. All media are served locally.
+
+## 2026-11-20 · Release check
+
+Verified the final mobile presentation directly on Pages. The V.90 pitch-map player reached “Connected · downstream data” at its natural end without a page exception. At a 390-pixel viewport the revised seek control spans approximately 309 CSS pixels. Captured and inspected the final mobile cover, player and desktop cover. All 16 published source/media blobs matched the local workspace at the release check.
