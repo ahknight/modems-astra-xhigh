@@ -21,3 +21,11 @@ The chapter dates distinguish standard approval from household adoption. Sources
 ## 2026-11-20 · Seeing the exchange
 
 The player now has two synchronized views. The waveform resolves a 12 ms window and its switchable peak envelope. The pitch map shows the whole signal from 0 to 4 kHz, using 512-sample Hann windows and an FFT. Brightness represents relative spectral magnitude above a display floor, and a cursor follows the audio clock. The map is computed once per selected chapter on demand. Explanations keep the transform mathematics out of the reading path.
+
+## 2026-11-20 · Published-browser verification
+
+GitHub Pages began serving the project from the gh-pages branch. Playwright exercised the published URL in Chrome 155 on macOS. All eight selectors, audio starts, pauses, seeks, restarts, replay state, waveform and pitch-map switches, peak overlay, stage jumps, origin photographs, chapter continuation and bibliography worked. No page exceptions, failed responses or external media requests appeared in the eight-chapter interaction pass. Reduced-motion playback kept the canvas still while the time advanced. Layout checks from 320 to 1440 CSS pixels found no horizontal overflow. Mobile screenshots prompted a two-row header and a full-width seek track.
+
+The shell could not open a loopback listener. Its local WebKit and Firefox launches aborted before rendering a page, and the local Chromium launcher was denied a macOS process registration. The connected Playwright Chrome instance provided the real-browser test. Release Safari, release Firefox, physical loudspeaker output, hardware interoperability and comprehensive accessibility auditing remain unverified. An escalated shell request to check Pages settings was unavailable under this session's approval policy. The GitHub connector published the branches and the public URL returned HTTP 200.
+
+Cover illustration generated with the built-in image tool and saved as assets/coupler.webp. The brief requested a landscape engraving of a black telephone handset seated in twin rubber acoustic cups on a sloped metal enclosure, with coiled cord, dense mid-century engineering-manual hatching and an ivory background. Its historical counterpart in the origin story is G. Edward Johnson's photograph. All media are served locally.

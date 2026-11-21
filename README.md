@@ -11,3 +11,5 @@ Open index.html in a modern browser or serve the repository root as static files
 - DEVLOG.md records implementation decisions and verification.
 
 Original editorial content and original media are licensed [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Attribute Carrier Archive, link the license and indicate changes. See the exhibit credits for independently licensed photographs and third-party quotations. The cover plate is an AI-assisted original illustration, generated with the built-in image tool. It depicts a representative handset and coupler. Historical photographs are separately labeled.
+
+The scope's optional pitch map uses spectrum.js to display the frequency content of the same audio buffer. Presentation output is deterministic for each selected generation.

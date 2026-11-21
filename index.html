@@ -6,8 +6,8 @@
 <meta name="description" content="Listen inside the landline modem handshake. An illustrated, interactive field guide from 300 bits per second to 56K.">
 <title>The Modem Handshake · Carrier Archive</title>
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=2">
-<script defer src="chapters.js?v=2"></script><script defer src="signals.js?v=2"></script><script defer src="spectrum.js"></script><script defer src="player.js?v=2"></script><script defer src="guide.js?v=2"></script>
+<link rel="stylesheet" href="style.css?v=3">
+<script defer src="chapters.js?v=2"></script><script defer src="signals.js?v=2"></script><script defer src="spectrum.js"></script><script defer src="player.js?v=3"></script><script defer src="guide.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#reader">Skip to chapter</a>
@@ -67,12 +67,12 @@
 <div class="chapter-stamp"><small>LINE RATE</small><strong id="rate-display"></strong><small>BITS PER SECOND</small></div>
 </div>
 <section id="lab" class="lab" aria-labelledby="lab-title">
-<div class="lab-head"><div class="lab-name"><svg><use href="#wave"/></svg><h3 id="lab-title">Signal laboratory</h3></div><span class="lab-mode"><i></i>Generated signal</span></div>
+<div class="lab-head"><div class="lab-name"><svg><use href="#wave"/></svg><h3 id="lab-title">Signal laboratory</h3></div><span class="lab-mode"><i></i><span id="synthesis-label">Synthesized exchange</span></span></div>
 <div class="lab-layout"><div class="instrument">
 <div class="scope"><div class="scope-heading"><div class="view-buttons" aria-label="Signal visualization"><button id="wave-view" aria-pressed="true">Waveform</button><button id="pitch-view" aria-pressed="false">Pitch map</button></div><span id="scope-scale">12 ms / window</span></div><canvas id="trace" aria-label="Amplitude of the synthesized signal over a short time window"></canvas>
 <div class="scope-foot"><span id="scope-axis">AMPLITUDE / TIME</span><label id="overlay-label"><input type="checkbox" id="envelope"> Peak envelope</label></div></div>
-<div class="transport"><button class="play" id="play-btn"><svg><use href="#play"/></svg><span>Play signal</span></button><button id="restart-btn" title="Restart signal" aria-label="Restart signal"><svg><use href="#restart"/></svg></button><input type="range" id="seek" min="0" value="0" step="0.001" aria-label="Seek through signal"><output id="time">0:00</output></div>
-</div><div class="stage-card"><div class="eyebrow">On the line</div><h4 id="stage-name"></h4><p id="stage-text"></p><span id="stage-count"></span></div></div>
+<div class="transport"><button class="play" id="play-btn"><svg><use href="#play"/></svg><span>Play signal</span></button><button id="restart-btn" title="Restart signal" aria-label="Restart signal"><svg><use href="#restart"/></svg></button><input type="range" id="seek" min="0" value="0" step="0.001" aria-label="Seek through signal"><span id="time" aria-hidden="true">0:00</span></div>
+</div><div class="stage-card"><div class="eyebrow">On the line</div><h4 id="stage-name" aria-live="polite"></h4><p id="stage-text"></p><span id="stage-count"></span></div></div>
 <details id="transcript"><summary>Signal stages &amp; synthesis notes</summary><p>In Waveform view, tighter ripples mean a higher pitch. The orange overlay traces their local peak amplitude. In Pitch map view, time runs left to right through the entire example. Higher pitches sit nearer the top. Bright bands mark strong pitches and a vertical cursor marks your position.</p><p id="method"></p><ol id="stage-list"></ol><div id="signal-sources"></div></details>
 </section>
 <div id="chapter-copy" class="prose"></div>
