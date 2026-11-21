@@ -11,3 +11,9 @@ The workspace protects the .git path and shell DNS cannot reach GitHub. Checkpoi
 The cover is an original AI-assisted engraving-style illustration of acoustic coupling. It represents a mechanism and makes no claim to depict a specific production model. The origin essay pairs it with a public-domain Novation CAT photograph and a CC BY 2.0 portrait of Lee Felsenstein. Credits preserve authorship, license links and modifications. The March 1976 magazine cover resolves a discrepancy with Felsenstein's later recollection of the article's date.
 
 The navigation follows eight rate milestones. Readers can take the origin story first or start the 300-bit/s instrument directly. The speed index changes the chapter and its instrument together. Local assets and classic scripts allow the same page to open from disk or a GitHub Pages subdirectory.
+
+## 2026-11-20 · From mark to CONNECT
+
+Added eight original 24 kHz signal generators. V.32 and V.34 present documented startup excerpts. V.90 moves from V.8 through PCM training to an explicitly assumed ideal connection that carries the text THE LINE IS OPEN. SIGNALS.md maps the choices, omissions and timing to clauses of the recommendations. Signal-level checks included deterministic unclipped buffers, cue bounds, V.32 scrambler prefixes, the V.34 harmonic pattern and level change, V.8 menu bytes and independent recovery of the V.90 payload. No hardware interoperability or conformance claim is made.
+
+The chapter dates distinguish standard approval from household adoption. Sources include the original CCITT/ITU-T recommendations, engineering accounts, magazines, museum interviews, RFCs and manufacturer documentation. The 33.6 chapter distinguishes the revised V.34 recommendation from informal product names. The last chapter distinguishes the nominal PCM ceiling from a North American power-limited connection.
