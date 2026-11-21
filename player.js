@@ -10,7 +10,7 @@
   const windowMs = 12;
   let audio, source, buffer, signal, frame, request = 0;
   let offset = 0, started = 0, currentStage = -1, duration = 0;
-  let stageRows = [];
+  let stageRows = [], pitchImage, pitchMode=false, intended=false;
 
   function position() {
     return source ? Math.min(duration, offset + audio.currentTime - started) : offset;
@@ -29,6 +29,14 @@
     }
     ctx.setTransform(scale,0,0,scale,0,0);
     ctx.clearRect(0,0,w,h);
+    if(pitchMode){
+      pitchImage ||= window.makePitchMap(signal);
+      ctx.drawImage(pitchImage,0,0,w,h);
+      ctx.fillStyle='#d9e4cf';ctx.font='11px monospace';
+      ctx.fillText('4 kHz',6,12);ctx.fillText('0 Hz',6,h-5);
+      ctx.fillStyle='#f1a36f';ctx.fillRect(Math.min(w-2,t*w/duration),0,2,h);
+      return;
+    }
     ctx.strokeStyle='#2b4339';ctx.lineWidth=1;
     ctx.beginPath();
     for (let x=0; x<=w; x+=w/18) {ctx.moveTo(x,.5);ctx.lineTo(x,h);}
@@ -82,7 +90,7 @@
   }
   function tick(){refresh();if(source)frame=requestAnimationFrame(tick);}
   function pause(){
-    request++;
+    intended=false;request++;
     if(source){
       offset=position();
       source.onended=null;source.stop();source.disconnect();source=null;
@@ -94,6 +102,7 @@
   }
   async function start(){
     if(!signal)return;
+    intended=true;
     const token=++request;
     try{
       audio ||= new (window.AudioContext || window.webkitAudioContext)();
@@ -122,9 +131,21 @@
     pause();offset=Math.max(0,Math.min(t,duration));refresh(true);
     if(continuous && offset<duration)start();
   }
-  play.onclick=()=>source?pause():start();
-  byId('restart-btn').onclick=()=>move(0,!!source);
-  seek.oninput=()=>move(Number(seek.value),!!source);
+  function setView(pitch){
+    pitchMode=pitch;
+    byId('wave-view').setAttribute('aria-pressed',String(!pitch));
+    byId('pitch-view').setAttribute('aria-pressed',String(pitch));
+    byId('overlay-label').hidden=pitch;
+    byId('scope-axis').textContent=pitch?'PITCH / TIME':'AMPLITUDE / TIME';
+    byId('scope-scale').textContent=pitch?'Full signal · 0–4 kHz':'12 ms / window';
+    trace.setAttribute('aria-label',pitch?'Signal spectrogram. Time runs left to right. High pitches appear at the top, with strong frequencies drawn brighter.':'Signal amplitude over a 12-millisecond window');
+    draw(position());
+  }
+  byId('pitch-view').onclick=()=>setView(true);
+  byId('wave-view').onclick=()=>setView(false);
+  play.onclick=()=>intended?pause():start();
+  byId('restart-btn').onclick=()=>move(0,intended);
+  seek.oninput=()=>move(Number(seek.value),intended);
   byId('envelope').onchange=()=>draw(position());
   window.addEventListener('resize',()=>draw(position()));
   document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
@@ -133,7 +154,7 @@
     start,
     load(id){
       pause();signal=window.ModemSignals.build(id);buffer=null;offset=0;
-      currentStage=-1;duration=signal.samples.length/signal.rate;seek.max=duration;
+      pitchImage=null;currentStage=-1;duration=signal.samples.length/signal.rate;seek.max=duration;
       play.querySelector('span').textContent='Play signal';
       byId('method').textContent=signal.method;
       byId('stage-list').replaceChildren();

@@ -6,8 +6,8 @@
 <meta name="description" content="Listen inside the landline modem handshake. An illustrated, interactive field guide from 300 bits per second to 56K.">
 <title>The Modem Handshake · Carrier Archive</title>
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
-<script defer src="chapters.js"></script><script defer src="signals.js"></script><script defer src="player.js"></script><script defer src="guide.js"></script>
+<link rel="stylesheet" href="style.css?v=2">
+<script defer src="chapters.js?v=2"></script><script defer src="signals.js?v=2"></script><script defer src="spectrum.js"></script><script defer src="player.js?v=2"></script><script defer src="guide.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#reader">Skip to chapter</a>
@@ -58,7 +58,7 @@
   </figure>
   <h3>A computer that could answer the phone</h3>
   <p>In 1977, Dennis Hayes and circuit designer Dale Heatherington took another route. Their 80-103A fitted into an S-100 expansion slot. Through a telephone-line interface, software could dial out or answer a call at home. A friend could call your computer even when you were away from the keyboard. The board still spoke the familiar 300-bit/s tones. What changed was who could pick up. <a href="https://www.worldradiohistory.com/Archive-Byte/70s/Byte-1977-08.pdf">BYTE, August 1977, “Do You Have Some Data to Communicate?”</a> · <a href="https://www.wa4dsy.com/heatherington/hayes/index.html">Heatherington’s photo album</a></p>
-</div>
+<a class="origin-next" href="#rate-300">Continue to the 300-bit/s chapter</a></div>
 </section>
 <section id="reader" tabindex="-1" aria-labelledby="chapter-title">
 <div class="chapter-lead">
@@ -69,11 +69,11 @@
 <section id="lab" class="lab" aria-labelledby="lab-title">
 <div class="lab-head"><div class="lab-name"><svg><use href="#wave"/></svg><h3 id="lab-title">Signal laboratory</h3></div><span class="lab-mode"><i></i>Generated signal</span></div>
 <div class="lab-layout"><div class="instrument">
-<div class="scope"><div class="scope-heading"><span>OSCILLOSCOPE</span><span id="scope-scale">12 ms / window</span></div><canvas id="trace" aria-label="Amplitude of the synthesized signal over a short time window"></canvas>
-<div class="scope-foot"><span>AMPLITUDE / TIME</span><label><input type="checkbox" id="envelope"> Peak envelope</label></div></div>
+<div class="scope"><div class="scope-heading"><div class="view-buttons" aria-label="Signal visualization"><button id="wave-view" aria-pressed="true">Waveform</button><button id="pitch-view" aria-pressed="false">Pitch map</button></div><span id="scope-scale">12 ms / window</span></div><canvas id="trace" aria-label="Amplitude of the synthesized signal over a short time window"></canvas>
+<div class="scope-foot"><span id="scope-axis">AMPLITUDE / TIME</span><label id="overlay-label"><input type="checkbox" id="envelope"> Peak envelope</label></div></div>
 <div class="transport"><button class="play" id="play-btn"><svg><use href="#play"/></svg><span>Play signal</span></button><button id="restart-btn" title="Restart signal" aria-label="Restart signal"><svg><use href="#restart"/></svg></button><input type="range" id="seek" min="0" value="0" step="0.001" aria-label="Seek through signal"><output id="time">0:00</output></div>
 </div><div class="stage-card"><div class="eyebrow">On the line</div><h4 id="stage-name"></h4><p id="stage-text"></p><span id="stage-count"></span></div></div>
-<details id="transcript"><summary>Signal stages &amp; synthesis notes</summary><p id="method"></p><ol id="stage-list"></ol><div id="signal-sources"></div></details>
+<details id="transcript"><summary>Signal stages &amp; synthesis notes</summary><p>In Waveform view, tighter ripples mean a higher pitch. The orange overlay traces their local peak amplitude. In Pitch map view, time runs left to right through the entire example. Higher pitches sit nearer the top. Bright bands mark strong pitches and a vertical cursor marks your position.</p><p id="method"></p><ol id="stage-list"></ol><div id="signal-sources"></div></details>
 </section>
 <div id="chapter-copy" class="prose"></div>
 <nav id="step-nav" class="step-nav" aria-label="Chapter navigation"></nav>
@@ -101,7 +101,7 @@
   <p><strong>A note on dates.</strong> Felsenstein recalls a 1973 design and, in the same interview, a July 1976 construction article. The surviving magazine gives March 1976 on its cover and the article’s first page. This exhibit uses the printed date for publication. <a href="https://www.worldradiohistory.com/Archive-Poptronics/70s/1976/Poptronics-1976-03.pdf">Original issue, p. 43</a></p>
 </section>
 
-<p>The brief Kim Maxwell quotation in the 2,400-bit/s chapter illustrates a manufacturer’s reaction to standardization. Interview by James L. Pelkey, July 19, 1988, p. 30. Interview rights remain with the original holders. <a href="https://archive.computerhistory.org/resources/access/text/2017/09/102740207-05-01-acc.pdf">Computer History Museum transcript</a></p><p>The opening plate is an original AI-assisted illustration of a handset coupled to a modem.</p><h3>About the sound</h3><p>Every listening example is generated locally. The waveform shows samples from the same buffer you hear. The peak envelope outlines the local peaks of that waveform. Short protocol events keep their specified timing where documented. Open the stage list to read at your own pace or jump to a signal. The scope holds still under reduced motion and updates on pause or seek.</p>
+<p>The brief Kim Maxwell quotation in the 2,400-bit/s chapter illustrates a manufacturer’s reaction to standardization. Interview by James L. Pelkey, July 19, 1988, p. 30. Interview rights remain with the original holders. <a href="https://archive.computerhistory.org/resources/access/text/2017/09/102740207-05-01-acc.pdf">Computer History Museum transcript</a></p><p>The opening plate is an original AI-assisted illustration of a handset coupled to a modem.</p><h3>About the sound</h3><p>Every listening example is generated locally. The waveform shows samples from the same buffer you hear. The peak envelope outlines the local peaks of that waveform. Short protocol events keep their specified timing where documented. Open the stage list to read at your own pace or jump to a signal. With reduced motion enabled, the trace holds on a still frame during playback and updates when you pause or seek.</p>
 <p>Read the <a href="SIGNALS.md">signal construction notes</a> and <a href="DEVLOG.md">development journal</a>.</p>
 <h3>License</h3><p>Original editorial text, cover illustration and synthesized media in <cite>Carrier Archive</cite> are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Credit Carrier Archive, link the license and identify changes. Historical media and quoted statements have their own credits above.</p>
 </div></section>
