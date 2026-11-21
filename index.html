@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5ec">
+<meta name="description" content="Listen inside the landline modem handshake. An illustrated, interactive field guide from 300 bits per second to 56K.">
+<title>The Modem Handshake · Carrier Archive</title>
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script defer src="chapters.js"></script><script defer src="signals.js"></script><script defer src="player.js"></script><script defer src="guide.js"></script>
+</head>
+<body>
+<a class="skip" href="#reader">Skip to chapter</a>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="wave" viewBox="0 0 28 24"><path d="M1 12h3l2-5 3 12 4-18 3 22 3-15 2 7 2-3h4"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M12 6v14M2 4q5-1 10 2 5-3 10-2v14q-5-1-10 2-5-3-10-2Z"/></symbol>
+<symbol id="headphones" viewBox="0 0 24 24"><path d="M3 15v-3a9 9 0 0 1 18 0v3M3 13h4v8H5a2 2 0 0 1-2-2Zm18 0h-4v8h2a2 2 0 0 0 2-2Z"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m6 3 15 9-15 9Z"/></symbol>
+<symbol id="pause" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M5 4h5v16H5zm9 0h5v16h-5z"/></symbol>
+<symbol id="restart" viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1-1 6m1-12v6h6"/></symbol>
+<symbol id="stack" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+</defs></svg>
+<header class="mast"><div class="frame mast-in">
+<a class="brand" href="#top"><span class="brand-mark"><svg><use href="#wave"/></svg></span>Carrier Archive</a>
+<nav aria-label="Main navigation"><a href="#chapters">Chapters</a><a href="#origins" class="origin-link">Origins</a><a href="#epilogue">Epilogue</a></nav>
+<a class="sources-link" href="#sources"><svg><use href="#book"/></svg>Sources<span> &amp; notes</span></a>
+</div></header>
+<main id="top">
+<section class="hero frame" aria-labelledby="title"><div class="intro">
+<div class="eyebrow orange"><i></i> An interactive field guide</div>
+<h1 id="title">The Modem<br><em>Handshake.</em></h1>
+<p>Have you ever wondered what those two modems were saying before the screen flashed <code>CONNECT</code>? Inside that burst of whistles and static, two machines were learning how to listen to each other.</p>
+<div class="hero-actions"><button class="primary" id="start"><svg><use href="#headphones"/></svg>Start listening</button><a class="text-link origin-link" href="#origins">Read the origins <span aria-hidden="true">↗</span></a></div>
+</div>
+<figure class="plate">
+<div class="drawing"><div class="plate-label">ACOUSTIC COUPLING</div><img src="assets/coupler.webp" width="1100" height="733" alt="Illustration of a telephone handset seated in two rubber cups on a modem, with the coiled cord trailing beside it."><b class="cross tl"></b><b class="cross tr"></b><b class="cross bl"></b><b class="cross br"></b></div>
+<figcaption><span class="plate-num">PLATE 01</span> Handset &amp; acoustic coupler <span class="illus">Illustration</span></figcaption>
+</figure></section>
+
+<section id="chapters" class="index-band" aria-labelledby="index-title"><div class="frame">
+<div class="index-heading"><h2 id="index-title" class="eyebrow"><svg><use href="#stack"/></svg>Chapter index</h2><span class="fine">Select a connection speed</span></div>
+<nav id="speed-list" aria-label="Connection speed"></nav>
+</div></section>
+
+<div class="frame">
+<section id="origins" class="origin-panel" hidden tabindex="-1"><div class="origins">
+  <p class="eyebrow">Origins</p>
+  <h2 id="origins-title">Pick up the receiver</h2>
+  <p>By 1962, Bell Labs engineers were measuring how reliably the Bell System’s 101A and 103A data sets could switch between pitches on a telephone circuit. An acoustic coupler made that idea tangible. You dialed a number and settled the handset into two rubber cups. A tiny speaker played data into the mouthpiece. A microphone listened at the earpiece. <a href="https://www.worldradiohistory.com/Archive-Bell-System-Technical-Journal/60s/Bell-System-Technical-Journal-1962-6-Complete.pdf">Bell System Technical Journal, pp. 1725–27</a> · <a href="https://www.worldradiohistory.com/Archive-Elementary-Electronics/1970/Elementary-Electronics-1978-07-08.pdf">Elementary Electronics, pp. 41–43</a></p>
+  <figure class="origin-photo"><img src="assets/acoustic-coupler.webp" width="1320" height="1008" alt="A cream telephone handset beside a black Novation CAT. Each end of the handset fits one of the two rubber cups on the modem." loading="lazy"><figcaption>With the handset lifted, you can see the two cups that keep the sending and receiving sounds apart. Novation CAT, photographed in 2004 by G. Edward Johnson. <a href="#image-credits">Photo credit</a></figcaption></figure>
+  <h3>A modem you could build</h3>
+  <p>In 1973, musicians looking for a bass player could leave a message on a terminal in Leopold’s Records in Berkeley. The terminal reached a shared computer by phone. Its modem was expensive enough to bother Community Memory engineer Lee Felsenstein. His Pennywhistle design grew out of the search for a cheaper receiver. <a href="https://archive.computerhistory.org/resources/access/text/2021/01/102734421-05-001-acc.pdf">Resource One newsletter, p. 3</a> · <a href="https://computerhistory.org/profile/lee-felsenstein/">Computer History Museum</a></p>
+  <p>The trick was hiding between keystrokes. An asynchronous terminal returns to a resting state called <em>mark</em> between characters. Felsenstein used that recurring pitch to give the receiver a fresh reference. Marty Spergel’s M&amp;R Enterprises offered the design as a kit. Readers could build along in the March 1976 issue of <cite>Popular Electronics</cite>. <a href="https://www.worldradiohistory.com/Archive-Poptronics/70s/1976/Poptronics-1976-03.pdf">Felsenstein’s construction article, pp. 43–50</a> · <a href="https://www.youtube.com/watch?v=39lPmiLnuo4">Felsenstein at VCF West</a></p>
+  <figure class="origin-quote">
+    <img src="assets/lee-felsenstein.webp" width="380" height="516" loading="lazy" alt="Lee Felsenstein in 2007">
+    <blockquote><p>“And we could do that if we paid attention to the data that was coming through.”</p></blockquote>
+    <figcaption>Lee Felsenstein on finding a reference pitch in the incoming characters. <a href="https://www.theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/">The Amp Hour, episode 684</a> · <a href="#image-credits">Photo credit</a></figcaption>
+  </figure>
+  <h3>A computer that could answer the phone</h3>
+  <p>In 1977, Dennis Hayes and circuit designer Dale Heatherington took another route. Their 80-103A fitted into an S-100 expansion slot. Through a telephone-line interface, software could dial out or answer a call at home. A friend could call your computer even when you were away from the keyboard. The board still spoke the familiar 300-bit/s tones. What changed was who could pick up. <a href="https://www.worldradiohistory.com/Archive-Byte/70s/Byte-1977-08.pdf">BYTE, August 1977, “Do You Have Some Data to Communicate?”</a> · <a href="https://www.wa4dsy.com/heatherington/hayes/index.html">Heatherington’s photo album</a></p>
+</div>
+</section>
+<section id="reader" tabindex="-1" aria-labelledby="chapter-title">
+<div class="chapter-lead">
+<div><div class="eyebrow"><span id="chapter-count" class="orange"></span><span class="rule"></span><span id="chapter-standard"></span></div>
+<h2 id="chapter-title"></h2><p id="chapter-dek" class="dek"></p></div>
+<div class="chapter-stamp"><small>LINE RATE</small><strong id="rate-display"></strong><small>BITS PER SECOND</small></div>
+</div>
+<section id="lab" class="lab" aria-labelledby="lab-title">
+<div class="lab-head"><div class="lab-name"><svg><use href="#wave"/></svg><h3 id="lab-title">Signal laboratory</h3></div><span class="lab-mode"><i></i>Generated signal</span></div>
+<div class="lab-layout"><div class="instrument">
+<div class="scope"><div class="scope-heading"><span>OSCILLOSCOPE</span><span id="scope-scale">12 ms / window</span></div><canvas id="trace" aria-label="Amplitude of the synthesized signal over a short time window"></canvas>
+<div class="scope-foot"><span>AMPLITUDE / TIME</span><label><input type="checkbox" id="envelope"> Peak envelope</label></div></div>
+<div class="transport"><button class="play" id="play-btn"><svg><use href="#play"/></svg><span>Play signal</span></button><button id="restart-btn" title="Restart signal" aria-label="Restart signal"><svg><use href="#restart"/></svg></button><input type="range" id="seek" min="0" value="0" step="0.001" aria-label="Seek through signal"><output id="time">0:00</output></div>
+</div><div class="stage-card"><div class="eyebrow">On the line</div><h4 id="stage-name"></h4><p id="stage-text"></p><span id="stage-count"></span></div></div>
+<details id="transcript"><summary>Signal stages &amp; synthesis notes</summary><p id="method"></p><ol id="stage-list"></ol><div id="signal-sources"></div></details>
+</section>
+<div id="chapter-copy" class="prose"></div>
+<nav id="step-nav" class="step-nav" aria-label="Chapter navigation"></nav>
+</section>
+<section id="epilogue" class="long-section"><div>
+  <div class="eyebrow orange"><i></i>Epilogue</div>
+  <h2>After the speaker went quiet</h2>
+  <p class="dek">For years, picking up the phone could interrupt someone’s download. Three different landline systems changed what the wire could do. Their histories overlap the last years of dial-up.</p>
+  <h3>ISDN gave the call a digital path</h3>
+  <p>Integrated Services Digital Network brought a digital interface to the subscriber. Basic-rate ISDN had two independent 64-kbit/s bearer channels and a 16-kbit/s D channel for signaling. A household could use one bearer for a voice call and the other for data. With two available channels and support at both ends, Multilink PPP could bundle them for a nominal 128 kbit/s before overhead. Signaling and call setup survived, but negotiating voiceband pitches was unnecessary on a digital data call. CCITT’s basic interface was already documented by 1988. <a href="https://www.itu.int/rec/T-REC-I.430/en">CCITT I.430, §5</a> · <a href="https://www.rfc-editor.org/rfc/rfc1990">IETF Multilink PPP</a></p>
+  <h3>DSL found room above the conversation</h3>
+  <p>The copper pair between a house and the exchange can carry frequencies beyond those passed through a voice call. ADSL uses that extra range on the local loop. In its voice-compatible form, filters separate the ordinary telephone from the data service. The modem measures many narrow channels and assigns more bits to the clearer ones. V.34 had probed many pitches to choose one operating setup. DSL puts many carriers to work simultaneously. Stanford’s John Cioffi, Peter Chow and their colleagues helped develop this discrete multitone approach. ITU-T approved G.992.1 in 1999. <a href="https://www.itu.int/rec/T-REC-G.992.1-199906-I/en">ITU-T G.992.1</a> · <a href="https://web.stanford.edu/group/OTL/documents/otlar05.pdf">Stanford’s development history</a></p>
+  <h3>DOCSIS learned the neighborhood</h3>
+  <p>Cable modems joined a shared coaxial network. CableLabs’ original DOCSIS specifications appeared in 1997, before V.90 approval. A cable modem first finds the provider’s downstream signal. During <em>ranging</em>, it sends upstream bursts and receives corrections to its timing and transmit power so the headend can hear it in its allotted turn. QAM constellations carried forward, and DOCSIS 3.1 added many closely spaced subcarriers. The old speaker used to let you overhear two modems figuring out a line. Behind a steady cable-modem light, equipment is still measuring a real piece of wire and adjusting how it speaks. <a href="https://www.cablelabs.com/tech-vision/tech-policy/informed-insights-whitepapers/securing-networks-broadband-age">CableLabs on the 1997 specification</a> · <a href="https://www.cablelabs.com/tech-vision/tech-policy/informed-insights-whitepapers/cable-broadband-technology-gigabit-evolution">CableLabs on modulation</a> · <a href="https://www.cisco.com/c/en/us/td/docs/cable/cmts/cmd_ref/b_cmts_cable_cmd_ref/cable_commands__show_cable_m_to_show_cable_u.html">Cisco ranging states</a></p>
+</div>
+</section>
+<section id="sources" class="long-section"><div class="eyebrow orange"><i></i>Field notes</div><h2>Sources &amp; credits</h2>
+<div class="prose"><p>Each chapter links its historical claims to the people, manuals and recommendations behind them. The signal notes identify the source for each synthesized excerpt and describe the edits you hear.</p>
+<details><summary>Chapter references</summary><div id="bibliography"></div></details>
+<section id="image-credits" aria-labelledby="image-credits-title">
+  <h3 id="image-credits-title">Photographs and quotation</h3>
+  <p><strong>Novation CAT acoustic coupler.</strong> G. Edward Johnson (Lorax), 2004. Released into the public domain by its photographer. Resized and converted to WebP for this exhibit. <a href="https://commons.wikimedia.org/wiki/File:Acoustic_coupler_20041015_175456_1.jpg">Original and dedication</a></p>
+  <p><strong>Lee Felsenstein (Processor Technology).</strong> © Marcin Wichary, 2007. Cropped by Gorinin, then resized and converted to WebP for this exhibit. The photograph retains its Creative Commons Attribution 2.0 Generic license. <a href="https://www.flickr.com/photos/8399025@N07/2182575920/">Original photograph</a> · <a href="https://commons.wikimedia.org/wiki/File:Lee_Felsenstein.02.jpg">Cropped version</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></p>
+  <p>The short quotation from Lee Felsenstein accompanies discussion of his receiver design. Rights in the interview remain with their respective holders. <a href="https://www.theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/">Interview and transcript</a></p>
+  <p><strong>A note on dates.</strong> Felsenstein recalls a 1973 design and, in the same interview, a July 1976 construction article. The surviving magazine gives March 1976 on its cover and the article’s first page. This exhibit uses the printed date for publication. <a href="https://www.worldradiohistory.com/Archive-Poptronics/70s/1976/Poptronics-1976-03.pdf">Original issue, p. 43</a></p>
+</section>
+
+<h3>About the sound</h3><p>Every listening example is generated locally. The waveform shows samples from the same buffer you hear. The peak envelope outlines the local peaks of that waveform. Short protocol events keep their specified timing where documented. Open the stage list to read at your own pace or jump to a signal. The scope holds still under reduced motion and updates on pause or seek.</p>
+<p>Read the <a href="SIGNALS.md">signal construction notes</a> and <a href="DEVLOG.md">development journal</a>.</p>
+<h3>License</h3><p>Original editorial text, cover illustration and synthesized media in <cite>Carrier Archive</cite> are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Credit Carrier Archive, link the license and identify changes. Historical media and quoted statements have their own credits above.</p>
+</div></section>
+</div></main>
+<footer><div class="frame"><a class="brand" href="#top"><svg><use href="#wave"/></svg>Carrier Archive</a><a href="#top">Back to the beginning ↑</a></div></footer>
+<noscript><p>This interactive exhibit uses JavaScript for chapter selection and locally synthesized audio. Enable JavaScript to explore the listening chapters.</p></noscript>
+</body></html>
